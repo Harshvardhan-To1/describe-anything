@@ -59,6 +59,7 @@ class DescribeAnythingModel(nn.Module):
     @staticmethod
     def mask_to_box(mask_np):
         mask_coords = np.argwhere(mask_np)
+        print(mask_coords)
         y0, x0 = mask_coords.min(axis=0)
         y1, x1 = mask_coords.max(axis=0) + 1
         
